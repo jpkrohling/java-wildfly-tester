@@ -4,7 +4,6 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
-import java.util.logging.Logger;
 
 /**
  * This is a regular JAX-RS endpoint with EJB capabilities. We use the EJB capability to specify an interceptor,
@@ -16,8 +15,6 @@ import java.util.logging.Logger;
 @Path("/order")
 @Stateless
 public class Endpoint {
-    private static final Logger log = Logger.getLogger(Endpoint.class.getName());
-
     @Inject
     AccountService accountService;
 

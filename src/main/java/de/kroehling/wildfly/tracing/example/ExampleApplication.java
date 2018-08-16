@@ -7,5 +7,5 @@ import javax.ws.rs.core.Application;
  * @author Juraci Paixão Kröhling
  */
 @ApplicationPath("/v1")
-public class EjbExampleApplication extends Application {
+public class ExampleApplication extends Application {
 }

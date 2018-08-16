@@ -2,8 +2,6 @@ package de.kroehling.wildfly.tracing.example;
 
 import org.eclipse.microprofile.opentracing.Traced;
 
-import javax.annotation.Resource;
-import javax.ejb.EJBContext;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import java.util.logging.Logger;
@@ -18,9 +16,6 @@ import java.util.logging.Logger;
 @Traced
 public class OrderService {
     private static final Logger log = Logger.getLogger(OrderService.class.getName());
-
-    @Resource
-    EJBContext ctx;
 
     @Inject
     InventoryService inventoryService;
