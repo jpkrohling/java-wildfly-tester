@@ -1,0 +1,22 @@
+apply plugin: 'war'
+
+group = 'de.kroehling.wildfly.tracing.example'
+version = '1.0-SNAPSHOT'
+description = "Java WildFly Tester"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+	mavenCentral()        
+}
+
+dependencies {
+    providedCompile 'javax:javaee-api:7.0'
+
+    providedCompile 'io.opentracing:opentracing-api:0.31.0'
+    providedCompile 'org.eclipse.microprofile.opentracing:microprofile-opentracing-api:1.1'
+
+    providedCompile 'io.jaegertracing:jaeger-client:0.30.3'
+}
